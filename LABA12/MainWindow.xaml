@@ -1,0 +1,74 @@
+﻿<Window x:Class="LABA12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LABA12"
+        mc:Ignorable="d"
+        Title="Вычисление выражений" Height="550" Width="500">
+    <Grid Margin="10">
+        <StackPanel>
+            
+            <Label x:Name="lblResult" Content="Ответ: 0.00" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+          
+            <GroupBox Margin="0,5" Padding="5">
+                <GroupBox.Header>
+                    <RadioButton x:Name="rbVariant9" IsChecked="True" GroupName="Formula" Content="Вариант 9: Сумма двойного цикла"/>
+                </GroupBox.Header>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Z = ∑∑ (cos(y^i) + j*x) / (i*j)" FontStyle="Italic" Margin="5"/>
+                    <UniformGrid Columns="2">
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <Label Content="N:"/>
+                            <TextBox x:Name="txtN9" Width="50" Text="3"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <Label Content="K:"/>
+                            <TextBox x:Name="txtK9" Width="50" Text="3"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <Label Content="x:"/>
+                            <TextBox x:Name="txtX9" Width="50" Text="1"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <Label Content="y:"/>
+                            <TextBox x:Name="txtY9" Width="50" Text="0,5"/>
+                        </StackPanel>
+                    </UniformGrid>
+                </StackPanel>
+            </GroupBox>
+
+          
+            <GroupBox Margin="0,5" Padding="5">
+                <GroupBox.Header>
+                    <RadioButton x:Name="rbVariant11" GroupName="Formula" Content="Вариант 11: Синус и сумма"/>
+                </GroupBox.Header>
+                <StackPanel>
+                    <TextBlock Text="Z = ∑∑ (sin(y^i) + i*x) / ((i+1)*j)" FontStyle="Italic" Margin="5"/>
+                    <UniformGrid Columns="2">
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <Label Content="N:"/>
+                            <TextBox x:Name="txtN11" Width="50" Text="2"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <Label Content="K:"/>
+                            <TextBox x:Name="txtK11" Width="50" Text="2"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <Label Content="x:"/>
+                            <TextBox x:Name="txtX11" Width="50" Text="2"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <Label Content="y:"/>
+                            <TextBox x:Name="txtY11" Width="50" Text="1"/>
+                        </StackPanel>
+                    </UniformGrid>
+                </StackPanel>
+            </GroupBox>
+
+          
+            <Button Content="Считать" Margin="0,20,0,0" Padding="10" Click="btnCalculate_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
